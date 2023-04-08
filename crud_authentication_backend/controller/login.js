@@ -1,6 +1,7 @@
+require('dotenv').config()
 const jwt = require("jsonwebtoken"); 
 // Secret key used for signing the token
-const secretKey = "dadablacksheep";
+const secretKey = process.env.JWT_SECRET;
 const fs =require('fs')
 
 module.exports = (req, res) => {
